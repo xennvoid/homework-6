@@ -1,0 +1,9 @@
+<div class="actions">
+    <div class="actions__container">
+        <span (click)="onSelectAllUsers()" class="actions__item">Select All</span>
+        <span (click)="onDeleteUsers()" class="actions__item">Delete</span>
+        <span (click)="onSortSelect()" class="actions__item">Sort</span>
+    </div>
+    <input type="text" [(ngModel)]="filterText" (ngModelChange)="onFilterChange()" placeholder="Search users..."
+        class="actions__search">
+</div>

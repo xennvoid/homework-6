@@ -1,0 +1,9 @@
+<section class="users">
+    <article *ngFor="let user of users | filterUsers: filter | sort: sortFilter:'name'" class="users__item">
+        <input type="checkbox" (change)="onUserSelect(user.id)" [checked]="selectedUsers.includes(user.id)"
+            [value]="user.id" />
+        <p class="users__name">{{user.name}}</p>
+        <p class="users__username">Username: {{user.username}}</p>
+        <p class="users__email">Email: {{user.email}}</p>
+    </article>
+</section>
